@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Repair & Maintenance Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        /* General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #d9e7ff;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #d9e7ff;
+            color: #333;
+        }
+
+        /* Header */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: #d9e7ff;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #003399;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+        }
+
+        .nav-links li a.active {
+            color: #003399;
+            font-weight: bold;
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .about-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 1100px;
+            margin: auto;
+            gap: 50px;
+        }
+
+        .about-text {
+            flex: 1;
+            text-align: left;
+        }
+
+        .about-text h2 {
+            font-size: 32px;
+            color: #222;
+            margin-bottom: 15px;
+        }
+
+        .about-text p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 24px;
+            background: #ff7c00;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #ff5700;
+        }
+
+        .about-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            width: 400px;
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Why Choose Us Section */
+        .why-choose {
+            background: white;
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        .why-choose h2 {
+            font-size: 32px;
+            color: #222;
+            margin-bottom: 30px;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            max-width: 1000px;
+            margin: auto;
+            padding-top: 20px;
+        }
+
+        .feature-box {
+            width: 250px;
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-5px);
+            background: #ff7c00;
+            color: white;
+        }
+
+        .feature-box i {
+            font-size: 40px;
+            color: #ff7c00;
+            margin-bottom: 10px;
+        }
+
+        .feature-box:hover i {
+            color: white;
+        }
+
+        .feature-box h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .feature-box p {
+            font-size: 16px;
+        }
+
+        /* Footer */
+        footer {
+            background: #111;
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .footer-container div {
+            width: 30%;
+            min-width: 250px;
+            margin-bottom: 20px;
+        }
+
+        .footer-container h3 {
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            color: #ff7c00;
+        }
+
+        .footer-container p,
+        .footer-container ul {
+            font-size: 0.9em;
+            color: #bbb;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-links ul li a {
+            color: #bbb;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .footer-links ul li a:hover {
+            color: #ff7c00;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin: 10px 5px;
+            font-size: 20px;
+            color: #bbb;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #ff7c00;
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+            font-size: 0.8em;
+            color: #777;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .footer-container div {
+                width: 100%;
+            }
+        }
+
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .about-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-text {
+                text-align: center;
+            }
+
+            .features {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <nav class="navbar">
+        <div class="logo">INANCE</div>
+        <ul class="nav-links">
+            <li><a href="dashboard.php" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="login.php">SignIn</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Us Section -->
+    <section class="about">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>About Our Company</h2>
+                <p>We specialize in delivering high-quality repair and maintenance services with a team of experienced
+                    professionals. Our goal is to provide quick, reliable, and affordable solutions for all your needs.
+                </p>
+                <p>With a strong reputation in the industry, we ensure that every service is handled with expertise and
+                    care.</p>
+                <button class="btn">Learn More</button>
+            </div>
+            <div class="about-image">
+                <img src="../img/download.jpeg" alt="Technician at Work">
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose">
+        <h2>Why Choose Us?</h2>
+        <div class="features">
+            <div class="feature-box">
+                <i class="fas fa-tools"></i>
+                <h3>Expert Technicians</h3>
+                <p>Our professionals are certified and highly skilled.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-thumbs-up"></i>
+                <h3>Trusted Services</h3>
+                <p>We have earned a strong reputation for reliability.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-dollar-sign"></i>
+                <h3>Affordable Pricing</h3>
+                <p>Transparent pricing with no hidden fees.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-clock"></i>
+                <h3>Fast Response</h3>
+                <p>Quick turnaround time and same-day service available.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>About Us</h3>
+                <p>We provide top-notch repair and maintenance services. Our team ensures quality work and customer
+                    satisfaction.</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="dashboard.php" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="login.php">SignIn</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>📍 123 Main Street, City, Country</p>
+                <p>📞 +01 123 456 7890</p>
+                <p>📧 info@example.com</p>
+
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <p class="footer-bottom">© 2025 Inance. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
